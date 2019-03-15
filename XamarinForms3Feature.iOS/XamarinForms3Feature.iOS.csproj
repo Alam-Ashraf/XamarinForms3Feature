@@ -28,6 +28,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignKey>iPhone Developer: Ramandeep Singh (RM9J5MSKF8)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -156,5 +158,21 @@
       <Project>{584B9163-6DAE-4E98-B842-A71DFE6631A7}</Project>
       <Name>XamarinForms3Feature</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\img2.jpeg" />
+    <BundleResource Include="Resources\img1.jpg" />
+    <BundleResource Include="Resources\img5.jpeg" />
+    <BundleResource Include="Resources\img4.jpg" />
+    <BundleResource Include="Resources\img3.jpg" />
+    <BundleResource Include="Resources\img9.jpeg" />
+    <BundleResource Include="Resources\img8.jpeg" />
+    <BundleResource Include="Resources\img7.jpg" />
+    <BundleResource Include="Resources\img6.jpg" />
+    <BundleResource Include="Resources\loader.gif" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\check.png" />
+    <BundleResource Include="Resources\cross.png" />
   </ItemGroup>
 </Project>

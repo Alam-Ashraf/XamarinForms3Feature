@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace XamarinForms3Feature.iOS
 {
@@ -23,9 +25,38 @@ namespace XamarinForms3Feature.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            CachedImageRenderer.Init();
+
+            SetToolbarColor();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }
+
+        private void SetToolbarColor()
+        {
+            UIView statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+
+            if ((UIScreen.MainScreen.Bounds.Height * UIScreen.MainScreen.Scale) == 2436)
+            {
+                // Set iPhoneX statusbar color as Green
+                if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+                {
+                    statusBar.BackgroundColor = Color.FromHex("#daa520").ToUIColor();
+                }
+            }
+            else
+            {
+                // Other device statusbar color as Black 
+                if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+                {
+                    statusBar.BackgroundColor = Color.FromHex("#daa520").ToUIColor();
+                }
+            }
+        }
+
+
     }
 }

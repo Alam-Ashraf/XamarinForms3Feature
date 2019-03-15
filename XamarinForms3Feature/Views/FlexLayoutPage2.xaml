@@ -1,5 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinForms3Feature.Views.FlexLayoutPage2">
-    <ContentPage.Content>
-    </ContentPage.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamarinForms3Feature.Views.FlexLayoutPage2"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" 
+             BackgroundColor="{StaticResource ColorSilver}"
+             Title="Flex Layout">
+    
+   <ScrollView Orientation="Both">
+    
+    <FlexLayout x:Name="FlexLayout" Wrap="NoWrap" JustifyContent="Start">
+        
+        
+            
+    </FlexLayout>
+    
+   </ScrollView>
 </ContentPage>

@@ -1,2 +1,79 @@
-﻿body {
+﻿
+/*ContentPage Background Color*/
+^contentpage {
+    background-color: #E6E6E6;
 }
+
+/*All StackLayout will take same margin*/
+stacklayout 
+{
+    margin:5 ;
+}
+
+stacklayout > boxView {
+
+   height: 30;
+   width: 30;
+   border-radius: 10;
+}
+
+/*Set Image Size using StyleClass*/
+.imageUser
+{
+    height:100;
+    width:100;
+}
+
+/*All Label size to 15 */
+^Label
+{
+    font-size: 15;
+    width: 90;
+    color: white;
+    margin-left: 5;
+}
+
+
+
+button {
+    color: white;
+    background-color: #E67E22;
+}
+
+
+#boxLine {
+    background-color: #E67E22;
+    height: 1;
+}
+
+/*Set Label Alignment and color using StyleId*/
+#imageName {
+    text-align: center;
+    padding: 3;
+    font-size: 20;
+    color: #7D3C98;
+}
+
+/*Inner Stack Background color*/
+stacklayout.innerStack {
+    background-color: #239B56;
+}
+
+entry {
+    color: #239B56;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

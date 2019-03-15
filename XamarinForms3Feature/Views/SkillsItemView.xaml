@@ -1,5 +1,38 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinForms3Feature.Views.SkillsItemView">
-    <ContentView.Content>
-    </ContentView.Content>
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="XamarinForms3Feature.Views.SkillsItemView"
+             BackgroundColor="{StaticResource ColorTransparent}"
+             >
+    
+    <Frame BackgroundColor="{StaticResource ColorFocused}"
+           Padding="4"
+           CornerRadius="15"
+           VerticalOptions="CenterAndExpand"
+           Margin="5"
+           >
+        
+        <StackLayout Margin="5,0,5,0" VerticalOptions="FillAndExpand" Orientation="Horizontal" 
+                     >
+            
+            <Label x:Name="LabelSkill" VerticalOptions="Center" 
+                   Text="{Binding Skill}" FontSize="{StaticResource Font20}"
+                   HorizontalOptions="StartAndExpand"
+                   TextColor="{StaticResource ColorWhite}"/>
+            
+            <Image x:Name="ImgCross" Source="cross.png" HeightRequest="24" 
+                   VerticalOptions="Center" HorizontalOptions="End"
+                   WidthRequest="24">
+                
+                <Image.GestureRecognizers>
+                     <TapGestureRecognizer Command="{Binding CrossImageCommand}"/>
+                </Image.GestureRecognizers>
+                
+            </Image>
+            
+        </StackLayout>
+        
+    </Frame>
+    
+    
 </ContentView>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinForms3Feature.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XamarinForms3Feature
@@ -11,7 +12,7 @@ namespace XamarinForms3Feature
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

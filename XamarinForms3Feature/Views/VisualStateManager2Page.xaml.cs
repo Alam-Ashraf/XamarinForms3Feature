@@ -10,6 +10,26 @@ namespace XamarinForms3Feature.Views
         public VisualStateManager2Page()
         {
             InitializeComponent();
+
+            // Size change event
+            SizeChanged+= OnSizeChanged;
         }
+
+        void OnSizeChanged(object sender, EventArgs e)
+        {
+            if(Width>Height)
+            {
+                // Landscape
+                VisualStateManager.GoToState(FlexLayout, "Landscape");
+            }
+            else
+            {
+                // Portrait
+                VisualStateManager.GoToState(FlexLayout, "Portrait");
+            }
+        }
+
     }
+
+
 }

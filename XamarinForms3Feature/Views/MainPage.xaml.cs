@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using XamarinForms3Feature.ViewModels;
 
-namespace XamarinForms3Feature
+namespace XamarinForms3Feature.Views
 {
     public partial class MainPage : ContentPage
     {
