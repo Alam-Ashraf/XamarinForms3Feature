@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XamarinForms3Feature" 
+             x:Class="XamarinForms3Feature.MainPage">
+    
+    <StackLayout>
+        
+            <!--FlexLayout 1-->
+            <Frame BackgroundColor="{StaticResource ColorNavyBlue}"
+                   CornerRadius="20" Margin="40,0,40,20" VerticalOptions="EndAndExpand"
+                   Padding="8">
+                
+                 <Label Text="FlexLayout 1" HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ColorWhite}" />
+                
+                
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuyCommand}"/>
+                </Frame.GestureRecognizers>
+                
+            </Frame>
+        
+           <!--FlexLayout 2-->
+           <Frame BackgroundColor="{StaticResource ColorNavyBlue}"
+                   CornerRadius="20" Margin="40,0,40,20" VerticalOptions="EndAndExpand"
+                   Padding="8">
+                
+                 <Label Text="FlexLayout 2" HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ColorWhite}" />
+                
+                
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuyCommand}"/>
+                </Frame.GestureRecognizers>
+                
+            </Frame>
+        
+    </StackLayout>
+    
+</ContentPage>
