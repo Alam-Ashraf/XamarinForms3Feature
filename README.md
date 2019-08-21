@@ -25,3 +25,7 @@
 # 6. Cascading Style Sheet used to design form
 
 ![4](https://user-images.githubusercontent.com/48187633/54434749-f719d100-4754-11e9-986d-5b97ac2160fa.jpg)
+
+# 6. Bindable Layout with FlexLayout
+
+![BindableLayout](https://user-images.githubusercontent.com/48187633/63455100-b04da700-c469-11e9-933e-7f52b6f6256a.png)
