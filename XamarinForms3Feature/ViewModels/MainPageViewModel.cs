@@ -19,6 +19,7 @@ namespace XamarinForms3Feature.ViewModels
         public ICommand VisualStateManager1Command { get; private set; }
         public ICommand VisualStateManager2Command { get; private set; }
         public ICommand CascadingStyleSheetCommand { get; private set; }
+        public ICommand BindableLayoutCommand { get; private set; }
 
         public MainPageViewModel()
         {
@@ -28,6 +29,7 @@ namespace XamarinForms3Feature.ViewModels
             VisualStateManager1Command = new Command(OnStateManager1Click);
             VisualStateManager2Command = new Command(OnStateManager2Click);
             CascadingStyleSheetCommand = new Command(OnCascadingStyleSheetClick);
+            BindableLayoutCommand = new Command(OnBindableLayoutClick);
         }
 
         private void OnFlexLayout1Click()
@@ -85,6 +87,14 @@ namespace XamarinForms3Feature.ViewModels
             }
         }
 
+        private void OnBindableLayoutClick()
+        {
+            // Flex Layout 2 Click
+            if (Navigation != null)
+            {
+                Navigation.PushAsync(new BindableLayoutPage());
+            }
+        }
 
         private void OnPropertyChanged([CallerMemberName]string propertyName = null)
         {

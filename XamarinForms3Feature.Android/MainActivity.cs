@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Droid;
 
 namespace XamarinForms3Feature.Droid
 {
@@ -17,7 +18,8 @@ namespace XamarinForms3Feature.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
+            // Initialized FFImageLoader
+            CachedImageRenderer.Init(true);
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

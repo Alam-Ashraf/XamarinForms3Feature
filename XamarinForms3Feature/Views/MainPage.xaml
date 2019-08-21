@@ -104,8 +104,23 @@
                 </Frame.GestureRecognizers>
                 
            </Frame>
-        
-    </StackLayout>
+
+            <!--Bindable Layout-->
+            <Frame BackgroundColor="{StaticResource ColorYellow}"
+                   CornerRadius="20" Margin="40,0,40,20" 
+                   Padding="8">
+
+                <Label Text="Bindable Layout" HorizontalOptions="CenterAndExpand"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource ColorWhite}"/>
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindableLayoutCommand}"/>
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+        </StackLayout>
         
    </ScrollView>
     

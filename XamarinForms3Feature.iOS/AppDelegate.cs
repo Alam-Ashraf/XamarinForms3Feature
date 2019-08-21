@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using FFImageLoading.Forms.Platform;
+using FFImageLoading.Forms.Touch;
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
@@ -26,6 +26,7 @@ namespace XamarinForms3Feature.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            // Initialized FFImageLoader
             CachedImageRenderer.Init();
 
             SetToolbarColor();
