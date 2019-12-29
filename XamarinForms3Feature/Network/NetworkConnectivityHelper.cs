@@ -22,7 +22,6 @@ namespace XamarinForms3Feature.Network
         public NetworkConnectivityHelper()
         {
             Connectivity.ConnectivityChanged += ConnectivityChanged;
-            //IsNotConnected = Connectivity.NetworkAccess != NetworkAccess.Internet;
         }
 
         private async void ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
