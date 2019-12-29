@@ -1,5 +1,7 @@
 # Xamarin Forms 3 Feature
+![XamarinForms3Feature](https://user-images.githubusercontent.com/48187633/71552653-52d4f280-2a27-11ea-8b6a-870a377116bb.gif)
 
+# Screenshot
 ![Screenshot_1566409893](https://user-images.githubusercontent.com/48187633/63455481-8052d380-c46a-11e9-96c7-50bb185a7507.png)
 
 # 1. FlexLayout used as Grid
