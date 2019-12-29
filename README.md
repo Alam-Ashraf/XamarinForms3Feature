@@ -30,4 +30,5 @@
 
 # 6. Bindable Layout with FlexLayout
 
-![BindableLayout](https://user-images.githubusercontent.com/48187633/63455100-b04da700-c469-11e9-933e-7f52b6f6256a.png)
+![1577598355218](https://user-images.githubusercontent.com/48187633/71552980-db09c680-2a2c-11ea-9ec4-499624838c8a.JPEG)
+
