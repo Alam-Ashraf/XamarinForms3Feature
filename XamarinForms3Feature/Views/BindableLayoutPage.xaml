@@ -45,7 +45,7 @@
                                 WidthRequest="100">
 
                                 <ffimageloading:CachedImage.Transformations>
-                                    <fftransformations:CircleTransformation />
+                                    <fftransformations:CircleTransformation BorderHexColor="#daa520" BorderSize="5" />
                                 </ffimageloading:CachedImage.Transformations>
 
                             </ffimageloading:CachedImage>
