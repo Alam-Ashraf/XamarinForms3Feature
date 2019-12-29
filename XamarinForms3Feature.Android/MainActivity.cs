@@ -22,6 +22,13 @@ namespace XamarinForms3Feature.Droid
             CachedImageRenderer.Init(true);
 
             base.OnCreate(savedInstanceState);
+
+            // Initialized Rg.Plugins
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+
+            // Initialized Xamarin Essentials
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

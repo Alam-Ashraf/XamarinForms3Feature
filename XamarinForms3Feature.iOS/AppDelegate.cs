@@ -29,6 +29,9 @@ namespace XamarinForms3Feature.iOS
             // Initialized FFImageLoader
             CachedImageRenderer.Init();
 
+            // Initialized Rg.Plugins
+            Rg.Plugins.Popup.Popup.Init();
+
             SetToolbarColor();
 
             LoadApplication(new App());

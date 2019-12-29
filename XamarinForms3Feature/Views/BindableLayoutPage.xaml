@@ -1,35 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
-             x:Class="XamarinForms3Feature.Views.BindableLayoutPage"
-             Title="Bindable Layout">
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.BindableLayoutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Bindable Layout"
+    mc:Ignorable="d">
 
     <ScrollView>
 
-        <FlexLayout  x:Name="FlexLayoutContainer" Wrap="Wrap" Direction="Row" 
-                    AlignItems="Start" JustifyContent="SpaceEvenly"
-                    AlignContent="Start" Margin="5"
-                    >
+        <FlexLayout
+            x:Name="FlexLayoutContainer"
+            Margin="5"
+            AlignContent="Start"
+            AlignItems="Start"
+            Direction="Row"
+            JustifyContent="SpaceEvenly"
+            Wrap="Wrap">
 
             <BindableLayout.ItemTemplate>
 
                 <DataTemplate>
 
-                    <StackLayout Spacing="3" Margin="2">
+                    <StackLayout Margin="2" Spacing="3">
 
-                        <Frame Padding="0" BackgroundColor="{StaticResource ColorTransparent}" CornerRadius="100">
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="{StaticResource ColorTransparent}"
+                            CornerRadius="100">
 
-                            <!--User Image-->
-                            <ffimageloading:CachedImage 
-                                          HorizontalOptions="Center" VerticalOptions="Center"
-                                          LoadingPlaceholder="loader2.gif" ErrorPlaceholder="loader.gif" 
-                                          DownsampleToViewSize="true" Aspect="Fill" 
-                                          HeightRequest="100" WidthRequest="100" Source="{Binding UserImage}">
+                            <!--  User Image  -->
+                            <ffimageloading:CachedImage
+                                Aspect="Fill"
+                                DownsampleToViewSize="true"
+                                ErrorPlaceholder="loader.gif"
+                                HeightRequest="100"
+                                HorizontalOptions="Center"
+                                LoadingPlaceholder="loader2.gif"
+                                Source="{Binding UserImage}"
+                                VerticalOptions="Center"
+                                WidthRequest="100">
 
                                 <ffimageloading:CachedImage.Transformations>
                                     <fftransformations:CircleTransformation />
@@ -39,8 +52,8 @@
 
                         </Frame>
 
-                        <!--User Name-->
-                        <Label Text="{Binding UserName}" HorizontalOptions="Center"/>
+                        <!--  User Name  -->
+                        <Label HorizontalOptions="Center" Text="{Binding UserName}" />
 
                     </StackLayout>
 

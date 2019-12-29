@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    x:Class="XamarinForms3Feature.Views.Common.NoInternetConnectionView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    mc:Ignorable="d">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="600"
+            DurationOut="500"
+            EasingIn="Linear"
+            EasingOut="Linear"
+            HasBackgroundAnimation="True"
+            PositionIn="Top"
+            PositionOut="Top"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+
+    <StackLayout BackgroundColor="Transparent">
+
+        <Frame
+            x:Name="FrameBackground"
+            Padding="2"
+            BackgroundColor="#32CD32"
+            CornerRadius="0"
+            HasShadow="True">
+
+            <Label
+                x:Name="LabelTitle"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"
+                Text="Connected"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand" />
+
+        </Frame>
+
+
+
+    </StackLayout>
+
+</pages:PopupPage>
