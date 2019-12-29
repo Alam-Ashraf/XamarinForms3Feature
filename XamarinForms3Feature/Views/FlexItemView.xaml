@@ -1,69 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.FlexItemView"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:converter="clr-namespace:XamarinForms3Feature.Converters"
-              HeightRequest="165"
-              WidthRequest="175"
-             Margin="3"
-             >
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinForms3Feature.Views.FlexItemView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:XamarinForms3Feature.Converters"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    Margin="3"
+    HeightRequest="165"
+    WidthRequest="175">
+
     <ContentView.Resources>
-            <ResourceDictionary>
-                <converter:BoolToReverseBoolConverter x:Key="IsHideIndicator" />
-            </ResourceDictionary>
+        <ResourceDictionary>
+            <converter:BoolToReverseBoolConverter x:Key="IsHideIndicator" />
+        </ResourceDictionary>
     </ContentView.Resources>
-    
-    
-         <Frame Margin="5" Padding="0"
-               BorderColor="{StaticResource ColorTransparent}"
-               CornerRadius="0" 
-               HasShadow="true"
+
+
+    <Frame
+        Margin="5"
+        Padding="0"
+        BorderColor="{StaticResource ColorTransparent}"
+        CornerRadius="0"
+        HasShadow="true"
+        HeightRequest="165"
+        WidthRequest="175">
+
+        <StackLayout
+            HeightRequest="165"
+            VerticalOptions="FillAndExpand"
+            WidthRequest="175">
+
+
+
+            <ffimageloading:CachedImage
+                x:Name="Image"
+                Aspect="AspectFill"
+                CacheType="All"
+                DownsampleToViewSize="true"
                 HeightRequest="165"
-                WidthRequest="175"
-               >
-        
-        <StackLayout VerticalOptions="FillAndExpand" 
-                      HeightRequest="165"
-                      WidthRequest="175">
-            
-           
-            
-              <ffimageloading:CachedImage x:Name="Image" 
-                                          CacheType="All" 
-                                          DownsampleToViewSize="true"
-                                          Source="{Binding Image}" 
-                                          Success="Handle_Success" 
-                                          HeightRequest="165"
-                                          WidthRequest="175"
-                                          RetryCount="3"
-                                          IsVisible="{Binding IsShowGif, Converter={StaticResource IsHideIndicator}}"
-                                          Aspect="AspectFill">
-                                        
-                        <ffimageloading:CachedImage.GestureRecognizers>
-                               <TapGestureRecognizer Command="{Binding BannerImageCommand}"/>
-                        </ffimageloading:CachedImage.GestureRecognizers>
-                                    
-               </ffimageloading:CachedImage>
-            
-             <ffimageloading:CachedImage x:Name="ImageLoader" 
-                                          CacheType="All" 
-                                          DownsampleToViewSize="false"
-                                          Source="loader.gif" 
-                                          HeightRequest="55"
-                                          WidthRequest="55"
-                                          HorizontalOptions="CenterAndExpand" 
-                                          VerticalOptions="CenterAndExpand"
-                                          RetryCount="3"
-                                          IsVisible="{Binding IsShowGif}"
-                                          Aspect="Fill"/>
-                                        
-                    
-            
-        </StackLayout>  
-        
-        
-   </Frame>  
-    
+                IsVisible="{Binding IsShowGif, Converter={StaticResource IsHideIndicator}}"
+                RetryCount="3"
+                Source="{Binding Image}"
+                Success="Handle_Success"
+                WidthRequest="175">
+
+                <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BannerImageCommand}" />
+                </ffimageloading:CachedImage.GestureRecognizers>
+
+            </ffimageloading:CachedImage>
+
+            <ffimageloading:CachedImage
+                x:Name="ImageLoader"
+                Aspect="Fill"
+                CacheType="All"
+                DownsampleToViewSize="false"
+                HeightRequest="55"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="{Binding IsShowGif}"
+                RetryCount="3"
+                Source="loader.gif"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="55" />
+
+
+
+        </StackLayout>
+
+
+    </Frame>
+
 </ContentView>

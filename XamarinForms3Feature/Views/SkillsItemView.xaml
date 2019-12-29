@@ -1,38 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.SkillsItemView"
-             BackgroundColor="{StaticResource ColorTransparent}"
-             >
-    
-    <Frame BackgroundColor="{StaticResource ColorFocused}"
-           Padding="4"
-           CornerRadius="15"
-           VerticalOptions="CenterAndExpand"
-           Margin="5"
-           >
-        
-        <StackLayout Margin="5,0,5,0" VerticalOptions="FillAndExpand" Orientation="Horizontal" 
-                     >
-            
-            <Label x:Name="LabelSkill" VerticalOptions="Center" 
-                   Text="{Binding Skill}" FontSize="{StaticResource Font20}"
-                   HorizontalOptions="StartAndExpand"
-                   TextColor="{StaticResource ColorWhite}"/>
-            
-            <Image x:Name="ImgCross" Source="cross.png" HeightRequest="24" 
-                   VerticalOptions="Center" HorizontalOptions="End"
-                   WidthRequest="24">
-                
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinForms3Feature.Views.SkillsItemView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource ColorTransparent}">
+
+    <Frame
+        Margin="5"
+        Padding="4"
+        BackgroundColor="{StaticResource ColorFocused}"
+        CornerRadius="15"
+        VerticalOptions="CenterAndExpand">
+
+        <StackLayout
+            Margin="5,0,5,0"
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand">
+
+            <Label
+                x:Name="LabelSkill"
+                FontSize="{StaticResource Font20}"
+                HorizontalOptions="StartAndExpand"
+                Text="{Binding Skill}"
+                TextColor="{StaticResource ColorWhite}"
+                VerticalOptions="Center" />
+
+            <Image
+                x:Name="ImgCross"
+                HeightRequest="24"
+                HorizontalOptions="End"
+                Source="cross.png"
+                VerticalOptions="Center"
+                WidthRequest="24">
+
                 <Image.GestureRecognizers>
-                     <TapGestureRecognizer Command="{Binding CrossImageCommand}"/>
+                    <TapGestureRecognizer Command="{Binding CrossImageCommand}" />
                 </Image.GestureRecognizers>
-                
+
             </Image>
-            
+
         </StackLayout>
-        
+
     </Frame>
-    
-    
+
+
 </ContentView>

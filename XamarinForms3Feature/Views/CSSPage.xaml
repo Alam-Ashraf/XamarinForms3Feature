@@ -1,87 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinForms3Feature.Views.CSSPage"
-             Title="Cascading Style Sheet">
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.CSSPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Cascading Style Sheet">
+
     <ContentPage.Resources>
         <ResourceDictionary>
-           <StyleSheet Source="/Assets/MyCSSFile.css"/>
+            <StyleSheet Source="/Assets/MyCSSFile.css" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    <Frame Padding="0" Margin="20">
-    
-      <ScrollView>
-        
-        <StackLayout >
-            
-            <Image StyleClass="imageUser" Source="user.png" />
-            
-            <Label StyleId="imageName" Text="Image Name"/>
-            
-            <!-- Horizontal Line-->
-            <BoxView StyleId="boxLine" />
-            
-            <!--Name Field-->
-            <StackLayout StyleClass="innerStack"
-                         Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand">
-                
-                <Label Text="User Name" VerticalOptions="Center"/>
-                
-                <Entry  Keyboard="Text" HorizontalOptions="FillAndExpand" />
-                
-            </StackLayout>
-            
-            <!--Email Field-->
-            <StackLayout StyleClass="innerStack"
-                         Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand">
-                
-                <Label Text="User Email" VerticalOptions="Center"/>
-                
-                <Entry Keyboard="Email" HorizontalOptions="FillAndExpand" />
-                
-            </StackLayout>
-            
-            <!--Password Field-->
-            <StackLayout StyleClass="innerStack"
-                         Orientation="Horizontal"
-                         HorizontalOptions="FillAndExpand">
-                
-                <Label Text="Password" VerticalOptions="Center"/>
-                
-                <Entry  Keyboard="Text" IsPassword="true" HorizontalOptions="FillAndExpand" />
-                
-            </StackLayout>
-            
-           <!-- Horizontal Line-->
-           <BoxView  StyleId="boxLine"/>
-            
-           
-           <StackLayout StyleClass="StackWithBoxview" 
-                        HorizontalOptions="CenterAndExpand"
-                        Orientation="Horizontal">
-                    
+
+    <Frame Margin="20" Padding="0">
+
+        <ScrollView>
+
+            <StackLayout>
+
+                <Image Source="user.png" StyleClass="imageUser" />
+
+                <Label StyleId="imageName" Text="Image Name" />
+
+                <!--  Horizontal Line  -->
+                <BoxView StyleId="boxLine" />
+
+                <!--  Name Field  -->
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    StyleClass="innerStack">
+
+                    <Label Text="User Name" VerticalOptions="Center" />
+
+                    <Entry HorizontalOptions="FillAndExpand" Keyboard="Text" />
+
+                </StackLayout>
+
+                <!--  Email Field  -->
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    StyleClass="innerStack">
+
+                    <Label Text="User Email" VerticalOptions="Center" />
+
+                    <Entry HorizontalOptions="FillAndExpand" Keyboard="Email" />
+
+                </StackLayout>
+
+                <!--  Password Field  -->
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    StyleClass="innerStack">
+
+                    <Label Text="Password" VerticalOptions="Center" />
+
+                    <Entry
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="true"
+                        Keyboard="Text" />
+
+                </StackLayout>
+
+                <!--  Horizontal Line  -->
+                <BoxView StyleId="boxLine" />
+
+
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    StyleClass="StackWithBoxview">
+
                     <BoxView Color="{StaticResource ColorRed}" />
                     <BoxView Color="{StaticResource ColorYellow}" />
                     <BoxView Color="{StaticResource ColorNavyBlue}" />
                     <BoxView Color="{StaticResource ColorMedium}" />
                     <BoxView Color="{StaticResource ColorFocused}" />
-                    
-           </StackLayout>
-            
-            
-                
-                
-                
-           <Button Text="Submit" VerticalOptions="EndAndExpand" />    
-                
-                
-        </StackLayout>
-            
-      </ScrollView>
-        
+
+                </StackLayout>
+
+
+
+
+
+                <Button Text="Submit" VerticalOptions="EndAndExpand" />
+
+
+            </StackLayout>
+
+        </ScrollView>
+
     </Frame>
 </ContentPage>

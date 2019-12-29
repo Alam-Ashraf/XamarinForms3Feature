@@ -1,127 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:XamarinForms3Feature" 
-             x:Class="XamarinForms3Feature.Views.MainPage"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true" 
-             BackgroundColor="{StaticResource ColorWhite}"
-             Title="MainPage"
-             >
-    
-   <ScrollView>
-    
-    <StackLayout VerticalOptions="CenterAndExpand" Margin="0,10,0,10">
-        
-            <!--FlexLayout 1-->
-            <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" VerticalOptions="Start"
-                   Padding="8">
-                
-                <Label Text="FlexLayout 1" 
-                       FontAttributes="Bold" HorizontalOptions="CenterAndExpand"
-                       TextColor="{StaticResource ColorWhite}" />
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding FlexLayou1Command}"/>
-                </Frame.GestureRecognizers>
-                
-            </Frame>
-        
-           <!--FlexLayout 2-->
-           <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
-                
-                <Label Text="FlexLayout 2" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}" />
-                
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding FlexLayou2Command}"/>
-                </Frame.GestureRecognizers>
-                
-            </Frame>
-            
-            <!--FlexLayout 3-->
-           <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
-                
-                <Label Text="FlexLayout 3" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}" />
-                
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding FlexLayou3Command}"/>
-                </Frame.GestureRecognizers>
-                
-            </Frame>
-        
-           <!--Visual State Manager 1-->
-           <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
-                
-                <Label Text="Visual State Manager 1" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}"/>
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding VisualStateManager1Command}"/>
-                </Frame.GestureRecognizers>
-                
-           </Frame>
-        
-           <!--Visual State Manager 2-->
-           <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
-                
-                <Label Text="Visual State Manager 2" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}"/>
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding VisualStateManager2Command}"/>
-                </Frame.GestureRecognizers>
-                
-           </Frame>
-            
-            <!--Cascading Style Sheets-->
-           <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
-                
-                <Label Text="Cascading Style Sheets" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}"/>
-                
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding CascadingStyleSheetCommand}"/>
-                </Frame.GestureRecognizers>
-                
-           </Frame>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:local="clr-namespace:XamarinForms3Feature"
+    Title="MainPage"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{StaticResource ColorWhite}">
 
-            <!--Bindable Layout-->
-            <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" 
-                   Padding="8">
+    <ScrollView>
 
-                <Label Text="Bindable Layout" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}"/>
+        <StackLayout Margin="0,10,0,10" VerticalOptions="CenterAndExpand">
+
+            <!--  FlexLayout 1  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20"
+                VerticalOptions="Start">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="FlexLayout 1"
+                    TextColor="{StaticResource ColorWhite}" />
 
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BindableLayoutCommand}"/>
+                    <TapGestureRecognizer Command="{Binding FlexLayou1Command}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  FlexLayout 2  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="FlexLayout 2"
+                    TextColor="{StaticResource ColorWhite}" />
+
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FlexLayou2Command}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  FlexLayout 3  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="FlexLayout 3"
+                    TextColor="{StaticResource ColorWhite}" />
+
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FlexLayou3Command}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  Visual State Manager 1  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Visual State Manager 1"
+                    TextColor="{StaticResource ColorWhite}" />
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VisualStateManager1Command}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  Visual State Manager 2  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Visual State Manager 2"
+                    TextColor="{StaticResource ColorWhite}" />
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VisualStateManager2Command}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  Cascading Style Sheets  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Cascading Style Sheets"
+                    TextColor="{StaticResource ColorWhite}" />
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CascadingStyleSheetCommand}" />
+                </Frame.GestureRecognizers>
+
+            </Frame>
+
+            <!--  Bindable Layout  -->
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Bindable Layout"
+                    TextColor="{StaticResource ColorWhite}" />
+
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BindableLayoutCommand}" />
                 </Frame.GestureRecognizers>
 
             </Frame>
 
         </StackLayout>
-        
-   </ScrollView>
-    
+
+    </ScrollView>
+
 </ContentPage>

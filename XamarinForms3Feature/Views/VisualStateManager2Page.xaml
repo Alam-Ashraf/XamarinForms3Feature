@@ -1,87 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.VisualStateManager2Page"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true" 
-             BackgroundColor="{StaticResource ColorSilver}"
-             Title="Visua State Manager">
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.VisualStateManager2Page"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Visua State Manager"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{StaticResource ColorSilver}">
+
     <ContentPage.Resources>
-        
+
         <ResourceDictionary>
-            
+
             <Style TargetType="FlexLayout">
-                
+
                 <Setter Property="VisualStateManager.VisualStateGroups">
-                    
+
                     <VisualStateGroupList>
-                        
+
                         <VisualStateGroup x:Name="OrientationState">
-                            
-                            
-                            <!--Portrait-->
+
+
+                            <!--  Portrait  -->
                             <VisualState x:Name="Portrait">
                                 <VisualState.Setters>
-                                    <Setter Property="Direction" Value="Column"/>
+                                    <Setter Property="Direction" Value="Column" />
                                 </VisualState.Setters>
                             </VisualState>
-                            
-                            <!--Landscape-->
+
+                            <!--  Landscape  -->
                             <VisualState x:Name="Landscape">
-                                 <VisualState.Setters>
-                                    <Setter Property="Direction" Value="Row"/>
+                                <VisualState.Setters>
+                                    <Setter Property="Direction" Value="Row" />
                                 </VisualState.Setters>
                             </VisualState>
-                            
-                            
+
+
                         </VisualStateGroup>
-                        
+
                     </VisualStateGroupList>
-                    
+
                 </Setter>
-                
-            </Style>    
-            
+
+            </Style>
+
         </ResourceDictionary>
-        
+
     </ContentPage.Resources>
-   
-   <Frame Padding="0" Margin="20" CornerRadius="0" > 
-        
-        <FlexLayout x:Name="FlexLayout" Wrap="NoWrap" Direction="Column">
-            
-               <ffimageloading:CachedImage x:Name="Image" 
-                                          CacheType="All" 
-                                          DownsampleToViewSize="true"
-                                          Source="img1.jpg" 
-                                          RetryCount="3"
-                                          FlexLayout.Basis="40%"
-                                          Aspect="Fill">
-                                        
-                       <!-- <ffimageloading:CachedImage.GestureRecognizers>
+
+    <Frame
+        Margin="20"
+        Padding="0"
+        CornerRadius="0">
+
+        <FlexLayout
+            x:Name="FlexLayout"
+            Direction="Column"
+            Wrap="NoWrap">
+
+            <ffimageloading:CachedImage
+                x:Name="Image"
+                Aspect="Fill"
+                CacheType="All"
+                DownsampleToViewSize="true"
+                FlexLayout.Basis="40%"
+                RetryCount="3"
+                Source="img1.jpg">
+
+                <!-- <ffimageloading:CachedImage.GestureRecognizers>
                                <TapGestureRecognizer Command="{Binding BannerImageCommand}"/>
                         </ffimageloading:CachedImage.GestureRecognizers>-->
-                                    
-               </ffimageloading:CachedImage>
-            
-            
-               <StackLayout FlexLayout.Basis="60%" Margin="10">
-            
-                    <Label Text="Title" />
-                
-                    <ScrollView>
-                    
-                         <Label TextColor="{StaticResource ColorGray}" 
-                               Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-                               />
-                    </ScrollView>
-                
-               </StackLayout>
-            
+
+            </ffimageloading:CachedImage>
+
+
+            <StackLayout Margin="10" FlexLayout.Basis="60%">
+
+                <Label Text="Title" />
+
+                <ScrollView>
+
+                    <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." TextColor="{StaticResource ColorGray}" />
+                </ScrollView>
+
+            </StackLayout>
+
         </FlexLayout>
-        
-   </Frame>
-    
+
+    </Frame>
+
 </ContentPage>

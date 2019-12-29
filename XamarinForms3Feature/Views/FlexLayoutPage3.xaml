@@ -1,86 +1,98 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.FlexLayoutPage3"
-             xmlns:converter="clr-namespace:XamarinForms3Feature.Converters"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true" 
-             BackgroundColor="{StaticResource ColorSilver}"
-             Title="Flex Layout">
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.FlexLayoutPage3"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:XamarinForms3Feature.Converters"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Flex Layout"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{StaticResource ColorSilver}">
+
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converter:StringToReverseBoolConverter  x:Key="IsLableShow" />
-            <converter:StringToViewSizeStringConverter  x:Key="ViewSizeConverter" />
+            <converter:StringToReverseBoolConverter x:Key="IsLableShow" />
+            <converter:StringToViewSizeStringConverter x:Key="ViewSizeConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    
-    
+
+
     <Frame Margin="20" Padding="2">
-        
-      <FlexLayout Direction="Column"
-                JustifyContent="Start"
-                Margin="2"
+
+        <FlexLayout
+            Margin="2"
+            Direction="Column"
+            HorizontalOptions="FillAndExpand"
+            JustifyContent="Start">
+
+            <Entry
+                Margin="5"
+                FontSize="14"
                 HorizontalOptions="FillAndExpand"
-                >
-        
-        <Entry  Placeholder="Name" Keyboard="Text"
+                Keyboard="Text"
+                Placeholder="Name" />
+
+
+            <Entry
+                Margin="5"
+                FontSize="14"
                 HorizontalOptions="FillAndExpand"
-                Margin="5"/>
-        
-        
-        <Entry  Placeholder="Phone" Keyboard="Numeric"
-                HorizontalOptions="FillAndExpand"
-                Margin="5"/>
-        
-        <Picker x:Name="GenderPicker" Title="Gender" 
-                HorizontalOptions="FillAndExpand"
-                Margin="5"/>
-        
-        
-        <FlexLayout Direction="Row"
-                    HeightRequest="40"
-                    >
-            
-            <Entry  x:Name="SkillEntry" Placeholder="Add Skill" Keyboard="Text"
+                Keyboard="Numeric"
+                Placeholder="Phone" />
+
+            <Picker
+                x:Name="GenderPicker"
+                Title="Gender"
+                Margin="5"
+                FontSize="14"
+                HorizontalOptions="FillAndExpand" />
+
+
+            <FlexLayout Direction="Row" HeightRequest="50">
+
+                <Entry
+                    x:Name="SkillEntry"
+                    Margin="5"
+                    FlexLayout.Basis="{Binding Source={x:Reference SkillEntry}, Path=Text, Converter={StaticResource ViewSizeConverter}}"
+                    FontSize="14"
                     HorizontalOptions="FillAndExpand"
-                    FlexLayout.Basis="{Binding Source={x:Reference SkillEntry},
-                                    Path=Text,
-                                    Converter={StaticResource ViewSizeConverter}}"
-                    Margin="5"/>
-                    
-            <Image x:Name="ImageCheck" Source="check.png"
-                    HeightRequest="35"
-                    WidthRequest="35"
+                    Keyboard="Text"
+                    Placeholder="Add Skill" />
+
+                <Image
+                    x:Name="ImageCheck"
                     FlexLayout.Basis="10%"
-                    IsVisible="{Binding Source={x:Reference SkillEntry},
-                                    Path=Text,
-                                    Converter={StaticResource IsLableShow}}"
-                    /> 
-                
-        </FlexLayout > 
-          
-         <ScrollView FlexLayout.Grow="1">  
-                
-            <FlexLayout x:Name="FlexSkillContainer" Direction="Row"
-                        Margin="5" Wrap="Wrap"  
-                        JustifyContent="Start" AlignItems="Start"
-                        AlignContent="Start"
-                        >
-                    
-            </FlexLayout>  
-                
-        </ScrollView>
-            
-         <Button Text="Submit" HeightRequest="40" 
-                    BackgroundColor="{StaticResource ColorYellow}" 
-                    TextColor="{StaticResource ColorWhite}"
-                    CornerRadius="15"  Margin="0,10,0,0"
-                    FontSize="{StaticResource Font18}"
-                    /> 
-    
-             
-     </FlexLayout>
-        
-   </Frame>
+                    HeightRequest="35"
+                    IsVisible="{Binding Source={x:Reference SkillEntry}, Path=Text, Converter={StaticResource IsLableShow}}"
+                    Source="check.png"
+                    WidthRequest="35" />
+
+            </FlexLayout>
+
+            <ScrollView FlexLayout.Grow="1">
+
+                <FlexLayout
+                    x:Name="FlexSkillContainer"
+                    Margin="5"
+                    AlignContent="Start"
+                    AlignItems="Start"
+                    Direction="Row"
+                    JustifyContent="Start"
+                    Wrap="Wrap" />
+
+            </ScrollView>
+
+            <Button
+                Margin="0,10,0,0"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="15"
+                FontSize="{StaticResource Font18}"
+                HeightRequest="40"
+                Text="Submit"
+                TextColor="{StaticResource ColorWhite}" />
+
+
+        </FlexLayout>
+
+    </Frame>
 </ContentPage>

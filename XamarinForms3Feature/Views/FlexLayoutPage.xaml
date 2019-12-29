@@ -1,29 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.FlexLayoutPage"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.UseSafeArea="true" 
-             BackgroundColor="{StaticResource ColorSilver}"
-             Title="Flex Layout">
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="XamarinForms3Feature.Views.FlexLayoutPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Flex Layout"
+    ios:Page.UseSafeArea="true"
+    BackgroundColor="{StaticResource ColorSilver}">
+
     <StackLayout HorizontalOptions="CenterAndExpand">
-        
-        
+
+
         <ScrollView>
-        
-             <FlexLayout x:Name="FlexLayout" Wrap="Wrap" 
-                         JustifyContent="Center"
-                         AlignItems="Start" 
-                         AlignContent="Start"
-                         Direction="Row"
-                         HorizontalOptions="Center"
-                         />
-               
-        
+
+            <FlexLayout
+                x:Name="FlexLayout"
+                AlignContent="Start"
+                AlignItems="Start"
+                Direction="Row"
+                HorizontalOptions="Center"
+                JustifyContent="Center"
+                Wrap="Wrap" />
+
+
         </ScrollView>
-        
-   </StackLayout>
-    
-   
+
+    </StackLayout>
+
+
 </ContentPage>

@@ -1,81 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="XamarinForms3Feature.Views.FlexItemView2"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             xmlns:converter="clr-namespace:XamarinForms3Feature.Converters">
-    
-     <ContentView.Resources>
-            <ResourceDictionary>
-                <converter:BoolToReverseBoolConverter x:Key="IsHideIndicator" />
-            </ResourceDictionary>
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XamarinForms3Feature.Views.FlexItemView2"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converter="clr-namespace:XamarinForms3Feature.Converters"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converter:BoolToReverseBoolConverter x:Key="IsHideIndicator" />
+        </ResourceDictionary>
     </ContentView.Resources>
-    
-   <Frame CornerRadius="0" 
-           Padding="0" Margin="10"
-           BorderColor="{StaticResource ColorTransparent}">
-    
-        <StackLayout Orientation="Vertical" >
-            
+
+    <Frame
+        Margin="10"
+        Padding="0"
+        BorderColor="{StaticResource ColorTransparent}"
+        CornerRadius="0">
+
+        <StackLayout Orientation="Vertical">
+
             <StackLayout HeightRequest="250">
-            
-                 <ffimageloading:CachedImage x:Name="Image" 
-                                          CacheType="All" 
-                                          DownsampleToViewSize="true"
-                                          Source="{Binding Image}"
-                                          Success="Handle_Success" 
-                                          HeightRequest="250"
-                                          WidthRequest="350"
-                                          RetryCount="3"
-                                          IsVisible="{Binding IsShowGif, Converter={StaticResource IsHideIndicator}}"
-                                          Aspect="Fill">
-                                        
-                        <ffimageloading:CachedImage.GestureRecognizers>
-                               <TapGestureRecognizer Command="{Binding BannerImageCommand}"/>
-                        </ffimageloading:CachedImage.GestureRecognizers>
-                                    
-               </ffimageloading:CachedImage>
-            
-             <ffimageloading:CachedImage x:Name="ImageLoader" 
-                                          CacheType="All" 
-                                          DownsampleToViewSize="false"
-                                          Source="loader.gif" 
-                                          HeightRequest="55"
-                                          WidthRequest="55"
-                                          HorizontalOptions="CenterAndExpand" 
-                                          VerticalOptions="CenterAndExpand"
-                                          RetryCount="3"
-                                          IsVisible="{Binding IsShowGif}"
-                                          Aspect="Fill"/>
-                                        
-                    
+
+                <ffimageloading:CachedImage
+                    x:Name="Image"
+                    Aspect="Fill"
+                    CacheType="All"
+                    DownsampleToViewSize="true"
+                    HeightRequest="250"
+                    IsVisible="{Binding IsShowGif, Converter={StaticResource IsHideIndicator}}"
+                    RetryCount="3"
+                    Source="{Binding Image}"
+                    Success="Handle_Success"
+                    WidthRequest="350">
+
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding BannerImageCommand}" />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+
+                </ffimageloading:CachedImage>
+
+                <ffimageloading:CachedImage
+                    x:Name="ImageLoader"
+                    Aspect="Fill"
+                    CacheType="All"
+                    DownsampleToViewSize="false"
+                    HeightRequest="55"
+                    HorizontalOptions="CenterAndExpand"
+                    IsVisible="{Binding IsShowGif}"
+                    RetryCount="3"
+                    Source="loader.gif"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="55" />
+
+
             </StackLayout>
-            
-            <Label Text="{Binding Title}" Margin="10,0,0,0" />
-            
-            
-            <Label TextColor="{StaticResource ColorGray}" 
-                   Margin="10,0,0,0"
-                   Text="{Binding Description}"
-                   />
-                   
-            <Frame BackgroundColor="{StaticResource ColorYellow}"
-                   CornerRadius="20" Margin="40,0,40,20" VerticalOptions="EndAndExpand"
-                   Padding="8">
-                
-                 <Label Text="Buy" HorizontalOptions="CenterAndExpand"
-                       FontAttributes="Bold"
-                       TextColor="{StaticResource ColorWhite}" />
-                
-                
+
+            <Label Margin="10,0,0,0" Text="{Binding Title}" />
+
+
+            <Label
+                Margin="10,0,0,0"
+                Text="{Binding Description}"
+                TextColor="{StaticResource ColorGray}" />
+
+            <Frame
+                Margin="40,0,40,20"
+                Padding="8"
+                BackgroundColor="{StaticResource ColorYellow}"
+                CornerRadius="20"
+                VerticalOptions="EndAndExpand">
+
+                <Label
+                    FontAttributes="Bold"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Buy"
+                    TextColor="{StaticResource ColorWhite}" />
+
+
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding BuyCommand}"/>
+                    <TapGestureRecognizer Command="{Binding BuyCommand}" />
                 </Frame.GestureRecognizers>
-                
+
             </Frame>
-        
+
         </StackLayout>
-        
-  </Frame>
-    
+
+    </Frame>
+
 </ContentView>
