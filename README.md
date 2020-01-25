@@ -1,4 +1,4 @@
-# Xamarin Forms 3 Feature
+# Xamarin Forms 3 Features
 ![XamarinForms3Feature](https://user-images.githubusercontent.com/48187633/71552653-52d4f280-2a27-11ea-8b6a-870a377116bb.gif)
 
 # Screenshot
