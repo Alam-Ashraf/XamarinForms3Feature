@@ -28,7 +28,7 @@
 
 ![4](https://user-images.githubusercontent.com/48187633/54434749-f719d100-4754-11e9-986d-5b97ac2160fa.jpg)
 
-# 6. Bindable Layout with FlexLayout
+# 7. Bindable Layout with FlexLayout
 
 ![1577598355218](https://user-images.githubusercontent.com/48187633/71552980-db09c680-2a2c-11ea-9ec4-499624838c8a.JPEG)
 
